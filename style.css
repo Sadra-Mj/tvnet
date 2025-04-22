@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body, html {
+    height: 100%;
+    background: url('Wallpaper.png') no-repeat center center/cover;
+  }
+  
+  .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+  }
+  
+  .content {
+    text-align: center;
+    color: white;
+  }
+  
+  h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    font-weight: 800;
+  }
+
+  h1 span{
+    color: #ff4081;
+  }
+  
+  h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .countdown div {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100px;
+  }
+  
+  .countdown span {
+    font-size: 32px;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .buttons {
+    margin-bottom: 30px;
+  }
+  
+  .buttons a {
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+  }
+  
+  .contact {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+  }
+  
+  .about {
+    color: white;
+  }
+  
+  .about:hover {
+    background-color: white;
+    color: #333;
+  }
+  
+
+  .social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  svg{
+    fill: #fff;
+  }
+
+
+  
