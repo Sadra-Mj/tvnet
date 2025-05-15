@@ -1,0 +1,1047 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #17212b;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+}
+
+main{
+    position: absolute;
+    width: 94vw;
+    height: 95vh;
+    background-color: #f1f1f1;
+    right: 1em;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 20px #17212b;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+main .container{
+    width: 99%;
+    height: 97%;
+    border-radius: 30px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 5px 1em;
+    z-index: 1;
+    text-align: center;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+main .container::-webkit-scrollbar{
+    width: 8px;
+}
+main .container::-webkit-scrollbar-track {
+    background: #17212b3b;     /* Track color */
+    border-radius: 10px;
+}
+main .container::-webkit-scrollbar-thumb {
+  background: #17212bd8;
+  border-radius: 10px;
+}
+
+nav{
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    width: 5vw;
+    padding: 4em 1em;
+    display: flex;
+    justify-content: center;
+}
+
+nav .container ul img{
+    width: 70px;
+}
+
+nav .container ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav .container ul li{
+    list-style: none;
+    margin: 1em 0;
+    
+}
+
+nav .container ul li a{
+    text-decoration: none;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .2s ease;
+}
+
+nav .container ul li a span{
+    margin-top: 5px;
+    opacity: 0;
+    transition: .2s ease;
+}
+    nav .container ul li a:hover{
+        scale: 105%;
+        margin-top: .5em;
+        margin-bottom: .5em;
+    }
+    nav .container ul li a:hover span{
+        opacity: 1;
+    }
+
+
+@media (max-width:1400px) {
+    body{
+        display: block;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+    }
+    nav{ 
+        height: 5vh;
+        width: 100vw;
+        bottom: 0;
+        right: 0;
+        padding: 0;
+        padding-bottom: 1.5em;
+        justify-content: center;
+        align-items: center;
+    }
+    nav .container ul{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        right: 0;
+        padding: 0 1em;
+    }
+    nav .container ul li a span{
+    display: none;
+    }
+    nav .container ul img{
+        display: none;
+    }
+    nav .container ul li{
+    list-style: none;
+    margin: 0 16px;
+    }
+    nav .container ul li a:hover{
+        scale: 110%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    main{
+        position: relative;
+        width: 100%;
+        height: 90vh;
+        right: 0;
+        border-radius: 0;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+        @media (width:300px){
+            main{
+                right: 0;    
+            }
+        }
+    main .container::-webkit-scrollbar{
+        display: none;
+    }
+    main .container{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/* Home */
+
+main .container section.home{
+    width: 100%;
+    height: 544px;
+    background: url(./assets/header_tint.png) center center no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+main .container section.home .title{
+    position: absolute;
+}
+
+main .container section.home h1{
+    font-size: 150px;
+    font-weight: 900;
+    color: #f1f1f1;
+}
+
+main .container section.home h2{
+    font-size: 40px;
+    color: #ff4484;
+}
+
+main .container section.home p{
+    color: #f1f1f1;
+    font-size: 20px;
+}
+
+main .container section.home .buttons{
+    margin-top: 3em;
+}
+
+main .container section.home .buttons a{
+    text-decoration: none;
+    border: solid #ff4484;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 100vw;
+    color: #ff4484;
+    background-color: #17212b;
+    font-weight: 500;
+    transition: .2s ease;
+}
+
+main .container section.home .buttons a.companies{
+    background-color: #ff4484;
+    color: #17212b;
+    border: solid 3px #17212b;
+}
+    main .container section.home .buttons a.channels:hover{
+        background-color: #ff4484;
+        color: #17212b;
+        border: solid 3px#ff4484;
+    }
+    main .container section.home .buttons a.companies:hover{
+        background-color: #17212b;
+        color: #ff4484;
+    }
+
+
+@media (max-width: 730px) {
+    main .container section.home .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    main .container section.home .title h1{
+        font-size: 90px;
+    }   
+    main .container section.home .title h2{
+        font-size: 20px;
+    } 
+    main .container section.home .title p{
+        font-size: 16px;
+        width: 70vw;
+    } 
+    main .container section.home .buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    main .container section.home .buttons a.companies{
+        margin-top: 1em;
+    }
+
+}
+
+/* About */
+
+section.about{
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.about h3{
+    font-size: 30px;
+    font-weight: 800;
+}
+section.about p{
+    text-align: center;
+    width: 55%;
+    font-size: 20px;
+    font-weight: 500;
+    color: #17212bd6;
+}
+
+section.about p a{
+    color: #ff4484;
+}
+
+
+section.about .logos{
+    overflow: hidden;
+    white-space: nowrap;
+}
+section.about .logos .logo-slide{
+    display: inline-block;
+    padding: 3em 0;
+    animation: slide_logos 20s linear infinite;
+}
+
+
+section.about .logos .logo-slide img{
+    height: 70px;
+    margin: 0 50px;
+    transition: .4s;
+    opacity: .5;
+}
+
+        section.about .logos .logo-slide img:hover{
+            height: 75px;
+        }
+
+        @keyframes slide_logos {
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(-100%);
+            }
+        }
+
+
+section.about .movies{
+    overflow: hidden;
+    white-space: nowrap;
+}
+section.about .movies .movies-slide{
+    display: inline-block;
+    padding: 3em 0 5em;
+    animation: slide_movies 50s linear infinite;
+}
+
+section.about .movies .movies-slide img{
+    width: 250px;
+    margin: 0 30px;
+    transition: .4s;
+}
+
+
+        @keyframes slide_movies {
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(100%);
+            }
+        }
+
+
+
+@media (max-width:700px) {
+    section.about h3{
+        font-size: 25px;
+    }
+    section.about p{
+        font-size: 16px;
+        width: 90%;
+    }
+    section.about .logos .logo-slide img{
+        height: 50px;
+        margin: 0 20px;
+    }
+    section.about .movies .movies-slide img{
+        width: 150px;
+    }
+}
+
+
+/* LIVE TV*/
+section.liveTV{
+    width: 100%;
+    height: auto;
+    background-color: #17212b;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 4em 0;
+}
+
+section.liveTV .stream{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1em;
+}
+
+section.liveTV .stream .tv-container {
+    position: relative;
+    width: 80%;
+}
+
+section.liveTV .stream .tv-image {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+section.liveTV .stream .tv-screen {
+    position: absolute;
+    top: 9px;
+    left: 6px;
+    width: 98%;  /* adjust to fit screen area */
+    height: 86.3%; /* adjust to fit screen area */
+    overflow: hidden;
+}
+
+section.liveTV .stream .tv-screen video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#customControls {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  color: red;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3px 9px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+#customControls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+section.liveTV .stream .tv-screen .TV_logo{
+    width: 100px;
+    position: absolute;
+    top: 1.3em;
+    left: 1.3em;
+}
+
+
+section.liveTV .title{
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1em;
+    color: #fff;
+}
+
+section.liveTV .title h3{
+    font-size: 50px;
+    font-weight: 800;
+    color: #ff4484;
+}
+
+section.liveTV .title p{
+    font-weight: 500;
+}
+
+section.liveTV .title hr{
+    width: 100%;
+}
+
+section.liveTV .title h5{
+    font-size: 20px;
+    color: #00bbff;
+}
+
+section.liveTV .title .dropdown{
+    border: solid 1px #fff;
+    border-radius: 100vw;
+    padding: 3px 15px;
+    margin-top: 6px;
+    width: 300px;
+}
+
+section.liveTV .title .dropdown select{
+    font-size: 18px;
+    color: #00bbff;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+@media (max-width:700px){
+    section.liveTV{
+        flex-direction: column;
+    }
+    section.liveTV .stream{
+        width: 100%;
+        height: 50%;
+    }
+    #customControls{
+        scale: 80%;
+        right: 2px;
+    }
+    section.liveTV .stream .tv-screen .TV_logo{
+        width: 50px;
+        top: 5px;
+        left: 5px;
+    }
+    section.liveTV .stream .tv-screen {
+        top: 4px;
+        left: 3px;
+        width: 98%;  /* adjust to fit screen area */
+        height: 86.3%; /* adjust to fit screen area */
+    }
+    section.liveTV .title{
+        width: 100%;
+        height: 50%; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    section.liveTV .title h3{
+        font-size: 30px;
+    }
+}
+
+
+/* LIVE CHANNELS LOGO */
+section.lives{
+    width: 100%;
+}
+
+section.lives .channels{
+    width: 100%;
+    height: 85px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 1em;
+}
+
+section.lives .channels .channel-slide{
+    display: inline-block;
+    padding: 10px 0;
+    animation: 40s slide_channels infinite linear;
+}
+
+section.lives .channels .channel-slide img{
+    height: 60px;
+    margin: 0 3em;
+}
+
+        @keyframes slide_channels {
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(-100%);
+            }
+        } 
+
+@media (max-width:700px){
+    section.lives .channels .channel-slide img{
+        height: 40px;
+        margin: 0 12px;
+    }
+}
+
+/* VIDEO BAR */
+section.videoBar{
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    margin-top: 2em;
+    position: relative;
+    overflow: hidden;
+}
+
+section.videoBar video{
+    width: 100%;
+    max-width: 100vw;
+    border-radius: 30px;
+    filter: brightness(.5);
+    overflow: hidden;
+    position: relative;
+}
+
+section.videoBar .title{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #f1f1f1;
+}
+
+section.videoBar .title h3{
+    font-size: 80px;
+}
+
+section.videoBar .title h3 span{
+    color: #ff4484;
+}
+
+section.videoBar .title p{
+    font-size: 30px;
+}
+
+section.videoBar .title a{
+    text-decoration: none;
+    background-color: #ff4484;
+    padding: 10px 40px;
+    margin-top: 1em;
+    border-radius: 100vw;
+    color: #fff;
+    animation: trial 2s ease infinite;
+    transition: .3s ease;
+}
+
+    section.videoBar .title a:hover{
+        padding: 13px 43px;
+        box-shadow: 0 0 20px #ff4484;
+    }
+    @keyframes trial {
+        0%{
+            color: #ffffff;
+        }
+        50%{
+            color: #000000;
+        }
+        100%{
+            color: #ffffff;
+        }
+    }
+
+
+@media (max-width: 1200px) {
+    section.videoBar .title{
+        scale: 70%;
+    }
+    section.videoBar .title h3{
+        font-size: 30px;
+    }
+    section.videoBar .title p{
+        font-size: 20px;
+    }
+    section.videoBar .title a{
+        padding: 10px 30px;
+    }
+}
+
+@media (max-width:700px){
+    section.videoBar video{
+        height: 400px;
+        object-fit: cover;
+    }
+    section.videoBar .title{
+        scale: 100%;
+    }
+    section.videoBar .title h3{
+        font-size: 20px;
+    }
+    section.videoBar .title p{
+        font-size: 12px;
+        margin-bottom: 4em;
+    }
+    section.videoBar .title a{
+        padding: 10px 30px;
+    }
+    section.videoBar .title a{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-radius: 0;
+
+    }
+}
+
+/* PLAN */
+section.plan{
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    margin-top: 2em;
+}
+
+section.plan h3{
+    font-size: 30px;
+    color: #17212b;
+}
+
+section.plan p{
+    color: #ff4484;
+    font-size: 18px;
+}
+
+section.plan .cards{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    padding: 0 2em;
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2em;
+    padding-bottom: 2em;
+}
+
+section.plan .cards .card{
+    width: 440px;
+    max-width: 450px;
+    height: auto;
+    background-color: #17212b;
+    border-radius: 30px;
+    padding: 2em 2.5em;
+    position: relative;
+    transition: .3s ease;
+}
+
+section.plan .cards .card .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 35px;
+    color: #f1f1f1;
+}
+
+section.plan .cards .card .title h5.price{
+    color: #ff4484;
+}
+
+section.plan .cards .card .details{
+    color: #939393;
+    text-align: left;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+
+section.plan .cards .card .button a{
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    text-decoration: none;
+    color: #17212b;
+    background-color: #00A6FF;
+    padding: 8px 20px;
+    border-radius: 100vw;
+}
+
+section.plan .cards .card.card4{
+    background-color: #ff4484;
+}
+
+section.plan .cards .card.card4 .title h5.price{
+    color: #17212b;
+}
+
+section.plan .cards .card.card4 .details{
+    color: #000000;
+}
+
+section.plan .cards .card.card4 .button a{
+    color: #00A6FF;
+    background-color: #f1f1f1;
+}
+
+section.plan .cards .card:hover{
+    scale: 108%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width:700px){
+    section.plan h3{
+        font-size: 25px
+    }
+    section.plan .cards .card .title h5.month{
+        font-size: 20px;
+    }
+    section.plan .cards .card .details{
+        font-size: 12px;
+    }
+    section.plan .cards .card .button a{
+        padding: 5px 10px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+
+/* Channel List */
+
+section.channelList{
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    padding: 3em 0;
+    margin-top: 2em;
+    border-radius: 30px;
+    background-color: #17212b;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.channelList h5{
+    font-size: 40px;
+    color: #ff4484;
+}
+
+section.channelList h6{
+    font-size: 20px;
+}
+
+section.channelList p{
+    width: 50vw;
+}
+
+section.channelList a{
+    text-decoration: none;
+    color: #17212b;
+    background-color: #00A6FF;
+    padding: 8px 35px;
+    margin-top: 1em;
+    border-radius: 100vw;
+    transition: .2s ease;
+}
+
+    section.channelList a:hover{
+        padding: 8px 40px;
+        color: #f1f1f1;
+    }
+
+
+@media (max-width:700px){
+    section.channelList h6{
+        font-size: 15px;
+        width: 80%;
+    }
+    section.channelList p{
+        width: 85vw;
+    }
+}
+
+/* DOWNLOAD & RESELLER */
+
+section.download_reseller{
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    gap: 1em;
+}
+
+section.download_reseller div{
+    width: 50%;
+    height: 300px;
+    border-radius: 30px;
+    background-color: #17212b;
+    padding: 2em 2em;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: .5s ease-in;
+}
+
+section.download_reseller div h2{
+    color: #ff4484;
+}
+
+section.download_reseller div.reseller p{
+    text-align: center;
+    width: 60%;
+}
+
+section.download_reseller div a{
+    text-decoration: none;
+    color: #17212b;
+    background-color: #00A6FF;
+    padding: 10px 40px;
+    font-weight: 500;
+    margin-top: 2em;
+    border-radius: 100vw;
+    transition: .3s;
+}
+
+    section.download_reseller div:hover{
+        background: linear-gradient(120deg, #ff4484, #a4214f);
+    }
+    section.download_reseller div:hover h2{
+        color: #17212b;
+    }
+    section.download_reseller div a:hover{
+        padding: 10px 45px;
+    }
+
+@media (max-width:1200px){
+    section.download_reseller{
+        flex-direction: column;
+    }
+    section.download_reseller div{
+        width: 100%;
+        height: auto;
+    }
+    section.download_reseller div.reseller p{
+        width: 90%;
+    }
+}
+
+/* CUSTOMER SUPPORT */
+section.support{
+    width: 100%;
+    height: 592px;
+    background: url(./assets/customer_Support.png) center center no-repeat;
+    background-size: cover;
+    margin-top: 2em;
+    border-radius: 30px;
+    position: relative;
+}
+
+section.support .overlay{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #8e153fef, transparent);
+    border-radius: 30px;
+}
+
+section.support .title{
+    position: absolute;
+    width: 50%;
+    height: 592px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section.support .title h3{
+    font-size: 30px;
+    color: #f1f1f1;
+}
+
+section.support .title form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section.support .title form input,
+section.support .title form textarea{
+    margin-top: 1em;
+    background-color: #17212b60;
+}
+
+section.support .title form input{
+    border-radius: 100vw;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    width: 300px;
+    color: #b5b5b5;
+    font-weight: 500;
+}
+
+section.support .title form textarea{
+    width: 300px;
+    height: 100px;
+    max-height: 200px;
+    max-width: 300px;
+    min-height: 100px;
+    min-width: 300px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    color: #b5b5b5;
+    font-weight: 500;
+}
+
+section.support .title form input::placeholder,
+section.support .title form textarea::placeholder
+{
+    color: #f1f1f1cc;
+}
+
+section.support .title form input:active,
+section.support .title form textarea:active,
+section.support .title form input:focus,
+section.support .title form textarea:focus
+{
+    background-color: #17212b;
+}
+
+section.support .title form button{
+    margin-top: 2em;
+    width: 300px;
+    border-radius: 100vw;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: .3s ease;
+}
+
+    section.support .title form button:hover{
+        background-color: #00A6FF;
+        color: #f1f1f1;
+    }
+
+
+@media (max-width:700px){
+    section.support{
+        background: url(./assets/customer_Support\ -\ small.png) center;
+    }
+    section.support .title{
+        width: 100%;
+        
+    }
+}
+
+/* FOOTER */
+footer{
+    width: 100%;
+    margin-top: .5em;
+    color: #17212b;
+}
