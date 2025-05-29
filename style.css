@@ -120,6 +120,7 @@ nav .container ul li a span{
         position: absolute;
     }
     nav{ 
+        position: fixed;
         height: 5vh;
         width: 100vw;
         bottom: 0;
