@@ -71,6 +71,20 @@ body{
     width: 100%;
     text-align: center;
     margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home span{
+    color: #fff;
+    margin-bottom: 2em;
+    font-size: 26px;
+}
+
+.home span a{
+    color: #ffffff;
 }
 
 .home svg{
