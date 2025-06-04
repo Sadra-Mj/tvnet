@@ -20,11 +20,51 @@
     <div class="container">
         <img src="./assets/logo_TV.png" alt="logo" class="logo">
         <video class="screen-video" autoplay controls>
-<!--           <source src="https://www.dl.dropboxusercontent.com/scl/fi/60vad4uc6uv34e4rviyfc/Havoc.mp4?rlkey=8remelhkkm60njwv6k52e0dv9&st=iqvrzszk&raw=1" type="video/mp4"> -->
+          <source src="" type="video/mp4">
           Your browser does not support the video tag.
     </video>
   </div>
 
+     <script>
+    function updateVideoSource() {
+      const now = new Date();
+      const day = now.getDay(); // 5 = Friday, 6 = Saturday
+      const hour = now.getHours();
+
+      const video = document.getElementById('myVideo');
+      const existingSource = video.querySelector('source');
+
+      const shouldShowVideo =
+        (day === 5 && hour >= 20) ||     // Friday from 20:00
+        (day === 6 && hour < 0);        // Early Saturday (before 00:00) — not really needed but logically clean
+
+      const shouldRemoveVideo =
+        (day === 6 && hour >= 0);       // Saturday from 00:00
+
+      if (shouldShowVideo && !existingSource) {
+        // Add source
+        const source = document.createElement('source');
+        source.src = "https://dl.dropboxusercontent.com/scl/fi/0kdrdpkehigasbwei4rb8/My.Fault.London.2025.720p.WEB-DL.x265.10Bit-Pahe.NightMovie.mp4";
+        source.type = "video/mp4";
+        video.appendChild(source);
+        video.load();
+        console.log("Video source added.");
+      }
+
+      if (shouldRemoveVideo && existingSource) {
+        video.pause();
+        video.removeChild(existingSource);
+        video.load();
+        console.log("Video source removed.");
+      }
+    }
+
+    // Run once on page load
+    updateVideoSource();
+
+    // Check every minute
+    setInterval(updateVideoSource, 60000); // 60 seconds
+  </script>
   
 
   <div class="home">
